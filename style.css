@@ -198,12 +198,34 @@ look in foodwebsite queries file*/
   	margin-right: 2%;
 }
   
-
+/*
   i{
   	color: black;
   	margin-right: 20px;
   	
+  }*/
+   li .fa-bars{
+      color: white;
+    margin-right: 20px;
+
   }
+  .navbar li: last-child{
+  border-right:0;
+  }
+
+  .icon{
+  float: right;
+  margin-top: 5%;
+  /*margin-top:30px;*/
+  cursor: pointer;
+  /*cursor: pointer is used so that
+  when we ahover over bars, theres a pointer
+  like all the other links*/
+  display: none;
+  /*dsiplay none is used because it shows with 
+  the screen enlarged */
+  margin-right: 5%;
+}
   #mailingList{
     margin-top: 5%;
   }
@@ -237,3 +259,47 @@ footer p{
 #fruitsandveggies{
 
 }
+
+/*QUERIES MAKE SEPEARATE FILE*/
+
+@media screen and (max-width: 767px) {
+  .navbar  {
+    display: none;}
+  
+  .icon {
+    float: right;
+    display: block;
+    font-size: 200%;
+  color: white;
+    }
+}
+
+/* The "responsive" class is added to the navbar
+ with Jquery when the user clicks on the icon. 
+ This class makes the navbar
+  look good on small screens
+   (display the links vertically instead 
+   of horizontally) */
+@media screen and (max-width: 767px) {
+  .navbar .responsive {position: relative;}
+ /* .navbar .responsive li .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }*/
+   
+   /*now define what happens when we click on bars
+  button, back to scripts.js file!*/
+  .navbar .responsive li {
+    float: left;
+    display: block;
+    text-align: left;
+    /*background-color: black;*/
+    margin-top: 7%;
+  }
+}
+
+
+  
+    
+
